@@ -4,6 +4,7 @@ module PushNotifications
         
         def perform()
           message_params
+          send_notification(undefined_variable)
         end
   
         private
