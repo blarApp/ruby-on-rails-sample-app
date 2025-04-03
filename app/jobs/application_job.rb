@@ -1,19 +1,14 @@
 module PushNotifications
     module Promoters
       class SendGroupLoanApplicationPassedToReviewJob < ApplicationJob
-        attr_reader :title, :body
         
-        def perform(title: "Default Title", body: "Default Body")
-          @title = title
-          @body = body
+        def perform()
           message_params
         end
   
         private
   
         def message_params
-          title = @title
-          body = @body
           
           {
             data: {
